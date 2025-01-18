@@ -1,0 +1,39 @@
+<html>
+    <div class="area"></div>
+</html>
+
+<script src="./interests/emperors.js"></script>
+<script src="./interests/lib/jquery-3.7.1.js"></script>
+<script defer>
+    imperators.forEach(emperor => {
+        date_start = emperor.start_of_reign.split(' ')
+        date_end = emperor.end_of_reign.split(' ')
+        length = emperor.length_of_reign.split(' ')
+    
+        let markup = `
+            <div>
+                <br>${emperor.name}<br><br>
+                start_of_reign: {<br>
+                ____day : ${date_start[0]},<br>
+                ____month : '${date_start[1]}',<br>
+                ____year : ${date_start[2]},<br>
+                ____bcad : '${date_start[3]}'<br>
+                },<br>
+                end_of_reign: {<br>
+                ____day : ${date_end[0]},<br>
+                ____month : '${date_end[1]}',<br>
+                ____year : ${date_end[2]},<br>
+                ____bcad : '${date_end[3]}'<br>
+                },<br>
+                length_of_reign: {<br>
+                ____years : ,<br>
+                ____months : ,<br>
+                ____days : <br>
+                }, <br><br>
+
+            </div>
+        `
+        $('.area').append(markup)
+    
+    });
+</script>

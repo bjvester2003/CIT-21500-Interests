@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperatores Romae</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./src/jquery-3.7.1.js"></script>
+    <script src="emperors.js"></script>
+    <script src="script.js" ></script>
+</head>
+<body style="margin: 0;"> 
+    <header>
+        <h1 style="text-align: center;">Imperatores Romani</h1>
+    </header>
+    <div id="search_bar">
+
+        <label for="dynasty_select" class="seop_label">Dynasty :</label>
+        <select id="dynasty_select" class="search_option">
+            <option value="All">All</option>
+            <option value="Julio-Claudian">Julio-Claudian</option>
+            <option value="Flavian">Flavian</option>
+            <option value="Nerva-Antonine">Nerva-Antonine</option>
+            <option value="Severan">Severan</option>
+        </select>
+
+        <label for="reign_start_year" class="seop_label">Start After :</label>
+        <input id="reign_start_year" class="search_option seop_input" type="text" size="3" maxlength="3">
+        <select id="reign_start_bcad" class="search_option">
+            <option value="BC">BC</option>
+            <option value="AD">AD</option>
+        </select>
+
+        <label for="reign_end_year" class="seop_label">Start Before :</label>
+        <input id="reign_end_year" class="search_option seop_input" type="text" size="3" maxlength="3">
+        <select id="reign_end_bcad" class="search_option">
+            <option value="BC">BC</option>
+            <option value="AD">AD</option>
+        </select>
+
+        <label for="years_reigned" class="seop_label">Minimum Years Reigned :</label>
+        <input id="years_reigned" class="search_option seop_input" type="text" size="2" maxlength="2">
+
+        <label for="nomen_imperatoris" class="seop_label">Name :</label>
+        <input id="nomen_imperatoris" class="search_option seop_input" type="text" size="20" maxlength="18">
+
+        <button onclick="filterEmperors()" class="search_option" style=" margin: 0; position: absolute; right: 5em;">Search</button>
+
+    </div>
+    <div class="content_wrap">
+        
+    </div>
+    
+</body>
+</html>
